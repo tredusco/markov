@@ -17,6 +17,10 @@ optional arguments:
   -s SEP, --sep SEP     Field separator in CSV file. DEFAULT: ;
   -c COL, --col COL     Name of the column to use. DEFAULT: name
   -t TEMP, --temp TEMP  Temperature, integer for randomness of the results (The lower the more random). DEFAULT: 3
+  -cc CATEGORY, --category CATEGORY
+                        Category to filter data. If not provided, not filtering is done.
+  -cn CATNAME, --catname CATNAME
+                        Category column name. DEFAULT: category
 ```  
 
 # Samples
@@ -32,4 +36,10 @@ python3 markov.py --n 12 -c Name -s "," -t 2 pokemon.csv
 ```
 python3 markov.py -n 12 -c name -s "," -t 5 "https://raw.githubusercontent.com/hadley/data-baby-names/master/baby-names.csv"
 ['Dandreas', 'Austine', 'Kelvina', 'Shelle', 'Lamberto', 'Santine', 'Demarie', 'Demarie', 'Normando', 'Esmerald', 'Maximilliams', 'Geralda']
+```
+
+## Remote execution filtering by category column
+```
+python3 markov.py -n 12 -c name -s "," -t 4 -cc girl -cn sex "https://raw.githubusercontent.com/hadley/data-baby-names/master/baby-names.csv"
+['Aracey', 'Lissetta', 'Destine', 'Mariley', 'Tracelyn', 'Arabelle', 'Carles', 'Guadalyn', 'Danie', 'Karandee', 'Yarita', 'Ceciliana']
 ```
