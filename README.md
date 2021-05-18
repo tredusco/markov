@@ -1,1 +1,1 @@
-# markov
+# Simple Markov Name Generator
