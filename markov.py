@@ -2,11 +2,6 @@ import pandas as pd
 import random
 import argparse
 
-FILE=""
-NUM=10
-SEP=";"
-COL="name"
-
 def parse():
     parser = argparse.ArgumentParser()
     parser.add_argument("FILE", help="Sample of delimited ")
